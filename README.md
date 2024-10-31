@@ -62,8 +62,8 @@
 
 </div>
 
-- **Dependent Variable**:
-- **Independent Variable**:
+- **Dependent Variable**: Attrition
+- **Independent Variable**: BusinessTravel, Department, EducationField, Gender, JobRole, MaritalStatus, OverTime
 
 ## Project Objectives
 
