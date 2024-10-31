@@ -67,5 +67,11 @@
 
 ## Project Objectives
 
-- 
-- 
+The objective of this project is to analyze the factors influencing *employee satisfaction* and *employee attrition* within organizations, aiming to enhance overall organizational performance.
+
+   1. **Employee Satisfaction Analysis (Linear Regression):**
+      - Identify and quantify relationships between workplace attributes and employee satisfaction.
+      - Develop a predictive model to estimate satisfaction levels based on variables
+   2. **Employee Attrition Analysis (Logistic Regression):**
+      - Analyze demographic and job-related factors affecting the likelihood of employee attrition.
+      - Create a predictive model estimating the probability of turnover based on variables
