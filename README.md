@@ -497,3 +497,7 @@ Each of these steps contributes to the goal of understanding the factors influen
   3. Monitor Employee Satisfaction Metrics: Strengthening factors related to work-life balance and environmental satisfaction might improve retention based on the negative coefficient influence.
 
 This analysis provides actionable insights for understanding and predicting employee attrition, focusing on key demographic and job-related factors influencing turnover probability that this model has outputted.
+
+## Discussion
+
+
