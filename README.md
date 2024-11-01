@@ -140,8 +140,13 @@ Checking for duplicates is a critical part of the data cleaning process to ensur
   ![removing duplicates](https://github.com/user-attachments/assets/925aba8f-2abc-40c4-bc07-17591f2983df)
 
 ### Getting the inputs and outputs
-This line of code is extracting a subset of the dataset_cleaned DataFrame that includes all rows and all columns except the first and the last. Then stored in the variable X, which is a NumPy array containing the independent variables used for modeling.
+  This method from the pandas library is to select specific rows and columns from a DataFrame.
 
+- **X for independent variables**
+The code extracting a subset of the dataset_cleaned DataFrame that includes all rows and all columns except the first and the last.
+
+- **y for dependent variable**
+The code extracts all values from the last column of the cleaned dataset and stores them in the variable y.
   
 
 ## Methodology for Logistic Regression
