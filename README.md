@@ -246,6 +246,7 @@ It is a graphical representation of the distribution of numerical data. Each bar
 
 ![pink](https://github.com/user-attachments/assets/dae79b3f-06c2-4579-b870-38f0025af689)
 
+![pink](https://github.com/user-attachments/assets/25d056c6-fa33-4079-816a-7954a9cced2b)
 
 ## Methodology for Logistic Regression
 ### Part 1 - Data Processing
