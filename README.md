@@ -201,6 +201,9 @@ This trains the linear regression model by finding the coefficients that relate 
 
 - **Mean values for model predict**: I used the mean values of each feature to create a single data point, which I used to make predictions with model.predict.
   
-- **model.predict**: This code generate a prediction using the model based on the mean values of features. 
+  ![mean values](https://github.com/user-attachments/assets/ccbcb25c-9002-4049-a1cc-b5e0ed8b587d)
+
+- **model.predict**: This code generate a prediction using the model based on the mean values of features.
+  
   
 ## Methodology for Logistic Regression
