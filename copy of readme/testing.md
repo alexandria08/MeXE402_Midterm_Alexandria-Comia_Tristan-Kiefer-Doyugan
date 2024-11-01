@@ -143,7 +143,7 @@ After identifying missing values in the dataset, I use the mean of each respecti
    
    ![nice](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
 
-   Another thing to note is that this dataset is clean already, so that's less load for us to work on, hooray for that.
+-   Another thing to note is that this dataset is clean already, so that's less load for us to work on, hooray for that.
    
    ![yippee-happy](https://github.com/user-attachments/assets/10b55811-660f-4ca2-a61a-ba7a1f4cfcc0)
 
@@ -196,9 +196,43 @@ After identifying missing values in the dataset, I use the mean of each respecti
 
    ![Screenshot 2024-11-01 144550](https://github.com/user-attachments/assets/a5ff537f-2591-4ec9-aded-001ebd14e298)
 
--   This line inspects the predicted labels for the test set. This line allows a quick view of the model’s predictions stored in y_pred, which can reveal the overall distribution of predicted classes (0s and 1s). Checking y_pred helps ensure that predictions align with the expected format before evaluating model performance and comparing with y_test.
+   This line inspects the predicted labels for the test set. This line allows a quick view of the model’s predictions stored in y_pred, which can reveal the overall distribution of predicted classes (0s and 1s). Checking y_pred helps ensure that predictions align with the expected format before evaluating model performance and comparing with y_test.
 
    ![Screenshot 2024-11-01 144633](https://github.com/user-attachments/assets/57f1e122-5f34-4454-8736-51c7cab87f3b)
+
+   And this line displays the predicted labels for the test set. By printing y_test, you can see the true values of the Attrition variable for the test set, serving as the benchmark for evaluating the model’s predictions (y_pred). This helps verify the target variable’s format and distribution, which are essential for calculating metrics like accuracy, recall, and precision when comparing with y_pred.
+
+   ![Screenshot 2024-11-01 144646](https://github.com/user-attachments/assets/ec253f9d-ed46-43dd-9059-cc238be6d3e3)
+
+   This line makes predictions without re-scaling X_test. Typically, scaling is required for logistic regression to perform accurately, as it aligns feature scales. Using unscaled data can lead to poor predictions and reduced accuracy, so in a well-preprocessed model pipeline, scaled data should be used (as shown in model.predict(sc.transform(X_test))). This line can be useful for comparisons or testing purposes, but in practice, it is recommended to always use scaled data with logistic regression.
+
+
+#### Evaluating Model Performance with a Confusion Matrix
+   This part assesses the model’s classification performance in terms of true positives, true negatives, false positives, and false negatives. The confusion matrix breaks down predictions to show where the model performs well and where it struggles, which helps refine the model if needed.
+
+   ![Screenshot 2024-11-01 144712](https://github.com/user-attachments/assets/0d3ffd88-4eea-4ab6-b4ae-5d987a4c1595)
+
+#### Calculating Accuracy Score
+   This measures the overall proportion of correct predictions. *accuracy_score* is a straightforward metric, useful for initial model validation but can be misleading if classes are imbalanced (e.g., if few employees leave). Additional metrics (below) provide a more nuanced evaluation.
+
+   ![Screenshot 2024-11-01 144728](https://github.com/user-attachments/assets/5b71becb-1b94-4966-b161-35ff1f53395e)
+
+#### Generating a Classification Report
+   This one evaluates precision, recall, and F1-score for each class. *classification_report* provides insights into the model’s sensitivity (recall), precision, and balanced F1-score for both employees who stay and those who leave, offering a more detailed assessment of performance.
+
+   ![Screenshot 2024-11-01 144741](https://github.com/user-attachments/assets/a0f8cf40-9211-4af6-9d29-a3772d0e3e34)
+
+#### Calculating AUC-ROC Score
+   This step can measure the model’s ability to distinguish between employees likely to stay versus those likely to leave. roc_auc_score (area under the ROC curve) quantifies how well the model ranks higher-risk employees. An AUC closer to 1 indicates strong predictive power for attrition.
+
+   ![Screenshot 2024-11-01 144755](https://github.com/user-attachments/assets/b55ad77b-3aca-47a8-9187-03487a75da4c)
+
+#### Interpreting Model Coefficients
+   And finally, this identifies which features have the strongest influence on attrition likelihood. Logistic regression coefficients reveal each variable's weight in predicting turnover, aiding in the analysis of demographic and job-related factors that most affect attrition. This interpretation helps align model insights with the objective of analyzing turnover drivers.
+
+
+
+
 
 
 
