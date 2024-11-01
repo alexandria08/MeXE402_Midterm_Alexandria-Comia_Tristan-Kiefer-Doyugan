@@ -210,9 +210,16 @@ This trains the linear regression model by finding the coefficients that relate 
 ### Feature Scaling and Model Training
 This combines feature scaling and model training for regression using Random Forests that improves model stability and accuracy by scaling the data and leveraging an ensemble method.
 
+![scaling](https://github.com/user-attachments/assets/4232dc19-18c7-4732-afa3-65932ddf4f42)
+
 ### R- Squared
+The r2_score compares the true values (y_test) with the predicted values (y_pred) and computes the R-squared value.
+
 ### Adjusted R-Squared
+A modified version of R-squared that accounts for the number of predictors in the model, making it more suitable for evaluating models with multiple independent variables. 
 ### Mean Squared Error
+It measures the average squared difference between the predicted values and the actual values.
+
 ### Cross Validation
 
 ## Methodology for Logistic Regression
