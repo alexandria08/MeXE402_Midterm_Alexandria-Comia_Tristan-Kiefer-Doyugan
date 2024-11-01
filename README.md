@@ -117,4 +117,9 @@ Converting categorical data is an essential step in preparing your dataset for a
 #### Checking for NaN values
 This code will help you identify which columns in the dataset have missing values and how many NaN values are present in each column.
 
+  ![nan values](https://github.com/user-attachments/assets/5a276b6c-7613-4130-8a25-e1e550922271)
 
+#### Handling Missing Values
+After identifying missing values in the dataset, I use the mean of each respective column to fill any NaN values in specific columns of the dataset_encoded DataFrame.
+
+  
