@@ -377,24 +377,24 @@ Each of these steps contributes to the goal of understanding the factors influen
 </div>
 
 - **Interpretation of Metrics**: 
-  1. **R- Squared**
+ 1. **R- Squared**
      - **Interpretation**: Approximately 51.76% of the variance in the dependent variable can be explained by the independent variables included in the model. This indicates that while the model has some predictive power, it also leaves a significant portion of the variance unexplained.
      - **Findings**: A value around 0.5 suggests that the model is moderately effective but may not be capturing all relevant factors affecting employee satisfaction. Additional variables or a different modeling approach could potentially improve this.
        
-  2. **Adjusted R-Squared**
+ 2. **Adjusted R-Squared**
      - **Interpretation**: The adjusted R-squared is very close to the R-squared value, indicating that the model's complexity is justified and that the variables used do contribute meaningful information.
      - **Findings**: The small difference between the R-squared and adjusted R-squared values suggests that the independent variables are relevant to predicting satisfaction levels without introducing significant noise.
        
-  3. **Mean Squared Error**
+ 3. **Mean Squared Error**
      - **Interpretation**:  The value being in the range of 0.0297 (on a min-max scaled basis) suggests that the predictions are relatively close to the actual values.
      - **Findings**: This value suggests reasonable performance.
        
-  4. **Mean Cross-Validated MSE**
-     - **Interpretation**: The adjusted R-squared is very close to the R-squared value, indicating that the model's complexity is justified and that the variables used do contribute meaningful information.
-     - **Findings**: The small difference between the R-squared and adjusted R-squared values suggests that the independent variables are relevant to predicting satisfaction levels without introducing significant noise.
+ 4. **Mean Cross-Validated MSE**
+     - **Interpretation**: The model makes predictions where the difference between those predictions and the actual satisfaction levels is around 0.0283.
+     - **Findings**: The model is relatively close in its predictions, and the errors are generally small.
        
-  5. **Standard Deviation of MSE**
+ 5. **Standard Deviation of MSE**
      - **Interpretation**:  A standard deviation of 0.0154 is relatively small, which means that the MSE is consistent across different folds and that the model's performance is stable.
      - **Findings**: Stability in MSE suggests that the model is robust and performs consistently well across different subsets of the data.
-     - 
+       
 ### Logistic Regression
