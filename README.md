@@ -149,6 +149,22 @@ The code extracting a subset of the dataset_cleaned DataFrame that includes all 
 
 - **y for dependent variable**
 The code extracts all values from the last column of the cleaned dataset and stores them in the variable y.
+
+  ![y](https://github.com/user-attachments/assets/3a65aded-4003-4e52-9bae-1333332965f4)
+
+### Creating the Training Sets and the Test Set
+This code is to prepare the dataset for model training and evaluation. By splitting the data, the model can be train on *training set* and evaluate its performance on *testing set*, which helps assess how well the model generalizes to new data.
+
+- **X_train**
+  Used for training the model of independent variables.
   
-   
+- **X_test**
+  Used for testing the model of independent variables.
+  
+- **y_train**
+ Used for traing the model of dependent variable.
+
+- **y_test**
+Used for testing the model of dependent variable.
+
 ## Methodology for Logistic Regression
