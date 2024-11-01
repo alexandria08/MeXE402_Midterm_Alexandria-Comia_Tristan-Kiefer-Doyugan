@@ -159,9 +159,12 @@ This code is to prepare the dataset for model training and evaluation. By splitt
 
 - **X_train**
   Used for training the model of independent variables.
-  
+
+  ![X train](https://github.com/user-attachments/assets/71a1665a-f542-4687-9d28-4878e1c402d2)
+
 - **X_test**
   Used for testing the model of independent variables.
+
   
 - **y_train**
  Used for traing the model of dependent variable.
