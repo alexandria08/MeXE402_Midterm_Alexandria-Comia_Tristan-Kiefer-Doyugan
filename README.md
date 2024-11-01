@@ -403,10 +403,6 @@ Each of these steps contributes to the goal of understanding the factors influen
 
    The logistic regression model uses these coefficients to estimate the probability of employee attrition. With that said, High Positive Coefficients indicate strong predictors of attrition. Efforts to reduce overtime or address frequent travel could lower turnover. while High Negative Coefficients Suggests areas to focus on for retention, like enhancing job satisfaction and improving work-life balance.
       
-     And by plotting ROC, we get this: 
-
-     ![ROC output plotted](https://github.com/user-attachments/assets/63cdb51b-2cda-4fe2-bce5-897a53a3ea97)
-
 
 ## Results
 
