@@ -215,6 +215,8 @@ This combines feature scaling and model training for regression using Random For
 ### R- Squared
 The r2_score compares the true values (y_test) with the predicted values (y_pred) and computes the R-squared value.
 
+![r squared](https://github.com/user-attachments/assets/05c7d62a-089e-4524-8c53-1ca67dd49ea0)
+
 ### Adjusted R-Squared
 A modified version of R-squared that accounts for the number of predictors in the model, making it more suitable for evaluating models with multiple independent variables. 
 
