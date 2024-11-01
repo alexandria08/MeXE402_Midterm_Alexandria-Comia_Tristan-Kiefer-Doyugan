@@ -63,7 +63,16 @@
 </div>
 
 - **Dependent Variable**: Attrition
-- **Independent Variable**: BusinessTravel, Department, EducationField, Gender, JobRole, MaritalStatus, OverTime
+- **Independent Variable**: 'Age', BusinessTravel', 'DailyRate', 'Department',
+       'DistanceFromHome', 'Education', 'EducationField', 'EmployeeCount',
+       'EmployeeNumber', 'EnvironmentSatisfaction', 'Gender', 'HourlyRate',
+       'JobInvolvement', 'JobLevel', 'JobRole', 'JobSatisfaction',
+       'MaritalStatus', 'MonthlyIncome', 'MonthlyRate', 'NumCompaniesWorked',
+       'Over18', 'OverTime', 'PercentSalaryHike', 'PerformanceRating',
+       'RelationshipSatisfaction', 'StandardHours', 'StockOptionLevel',
+       'TotalWorkingYears', 'TrainingTimesLastYear', 'WorkLifeBalance',
+       'YearsAtCompany', 'YearsInCurrentRole', 'YearsSinceLastPromotion',
+       'YearsWithCurrManager'
 
 ## Project Objectives
 
@@ -135,9 +144,27 @@ After identifying missing values in the dataset, I use the mean of each respecti
    ![nice](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
 
    Another thing to note is that this dataset is clean already, so that's less load for us to work on, hooray for that.
+   
    ![yippee-happy](https://github.com/user-attachments/assets/10b55811-660f-4ca2-a61a-ba7a1f4cfcc0)
 
 #### Encoding Binary Categorical Variables
-   After importing the dataset, we convert the binary categorical variables (Attrition, Gender, and OverTime) into numeric format for model compatibility. By using *LabelEncoder* transforms these variables to binary numeric values (0 or 1). Encoding 'Attrition' is essential as it’s the target variable (dependent), indicating turnover likelihood. 'Gender' and 'OverTime' are independent variables related to demographics and job conditions, impacting attrition.
+   After importing the dataset, we convert the binary categorical variables (Attrition, Gender, and OverTime) into numeric format for model compatibility. By using *LabelEncoder*, it transforms these variables into binary numeric values (0 or 1). Encoding 'Attrition' is essential as it’s the target variable (dependent), indicating turnover likelihood. 'Gender' and 'OverTime' are independent variables related to demographics and job conditions, impacting attrition.
 
    ![niceu](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
+
+#### One-Hot Encoding Non-Binary Categorical Variables
+   After importing the dataset, we convert the binary categorical variables (Attrition, Gender, and OverTime) into numeric format for model compatibility. By using *LabelEncoder*, it transforms these variables into binary numeric values (0 or 1). Encoding 'Attrition' is essential as it’s the target variable (dependent), indicating turnover likelihood. 'Gender' and 'OverTime' are independent variables related to demographics and job conditions, impacting attrition.
+
+   ![Screenshot 2024-11-01 143637](https://github.com/user-attachments/assets/dfd78d2c-0bcc-49a4-bd2b-b4cc2c4a3a1b)
+
+#### Dropping Non-Informative Columns
+   Now, we remove columns that do not contribute meaningful information to attrition prediction. These columns (EmployeeNumber, Over18, StandardHours, EmployeeCount) are not directly related to demographic or job-related factors that might impact turnover, so dropping them reduces data noise and improves model clarity.
+
+   ![Screenshot 2024-11-01 143733](https://github.com/user-attachments/assets/afaad33f-01fc-4496-ab59-1a4566901222)
+
+#### Dataset Inspection
+   Now, we remove columns that do not contribute meaningful information to attrition prediction. These columns (EmployeeNumber, Over18, StandardHours, EmployeeCount) are not directly related to demographic or job-related factors that might impact turnover, so dropping them reduces data noise and improves model clarity.
+
+   ![Screenshot 2024-11-01 143832](https://github.com/user-attachments/assets/9bff245b-4a89-4ecb-b253-e1685ff48b03)
+
+
