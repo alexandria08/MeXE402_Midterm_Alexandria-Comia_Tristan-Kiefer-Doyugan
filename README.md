@@ -407,7 +407,6 @@ Each of these steps contributes to the goal of understanding the factors influen
 
      ![ROC output plotted](https://github.com/user-attachments/assets/63cdb51b-2cda-4fe2-bce5-897a53a3ea97)
 
-     As we can see, the overview is that the ROC curve illustrates the model's ability to distinguish between employees who leave and those who stay. The True Positive Rate (Sensitivity) Measures the proportion of actual attritions correctly identified by the model, the False Positive Rate indicates the proportion of non-attrition cases incorrectly classified as attrition. An AUC of 0.86 indicates a strong model performance. The model has an 86% chance of correctly distinguishing between an employee who leaves and one who stays. The closer the AUC is to 1, the better the model is at predicting attrition. We can also use this model to focus retention efforts on employees identified as high-risk, potentially reducing turnover rates.
 
 ## Results
 
