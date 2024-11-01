@@ -175,4 +175,7 @@ This code is to prepare the dataset for model training and evaluation. By splitt
 - **y_test**
 Used for testing the model of dependent variable.
 
+   ![y test](https://github.com/user-attachments/assets/4e6f0233-6b70-4c03-909a-6b44682fd4fb)
+
+### 
 ## Methodology for Logistic Regression
