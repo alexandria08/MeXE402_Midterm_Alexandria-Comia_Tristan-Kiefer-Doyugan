@@ -114,6 +114,11 @@ Converting categorical data is an essential step in preparing your dataset for a
 
   ![bool to float](https://github.com/user-attachments/assets/285acd92-7521-4c69-a28f-7b2415ba09c1)
 
+#### Rearranging Columns
+After performing one-hot encoding, the dependent variable is not positioned as the last column. Therefore, I rearranged the columns to move the dependent variable, satisfaction_level, to the last column.
+
+  
+   
 #### Checking for NaN values
 This code will help you identify which columns in the dataset have missing values and how many NaN values are present in each column.
 
