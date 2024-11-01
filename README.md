@@ -75,27 +75,27 @@ The objective of this project is to analyze the factors influencing *employee sa
    2. **Employee Attrition Analysis (Logistic Regression):**
       - Analyze demographic and job-related factors affecting the likelihood of employee attrition.
       - Create a predictive model estimating the probability of turnover based on variables
-## Methodology
+      - 
+## Methodology for Linear Regression
 
-## Linear Regression
+## Part 1 - Data Processing
 
-### Part 1 - Data Processing
-#### Importing Dataset
+### Importing Dataset
    To import the dataset, I uploaded my CSV file, used the pandas library to handle data as a DataFrame, and applied the pd.read_csv() function to read the file. This function loads the data into a structured format, converting it into a pandas DataFrame for easy data manipulation and analysis.
 
    ![import again](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
 
-#### Rearranging Columns
+### Rearranging Columns
    Reorder the dataset so that the dependent variable, satisfaction_level, is the last column. Then, use dataset_reordered.head() to display the rows and columns of the dataset, confirming it has been loaded correctly and allowing you to preview the data.
 
    ![moving](https://github.com/user-attachments/assets/9ec9c908-d036-45dc-aa81-31e7ecc02576)
 
-#### Checking Data Types
+### Checking Data Types
 Each column in a DataFrame can have a different data type, which affects how you can manipulate and analyze the data. In this dataset, there are two common data types: object (typically used for string data) and float (used for numeric data).
 
    ![dtypes](https://github.com/user-attachments/assets/557efbf9-a12e-4c6c-a243-c5c457185605)
 
-#### Converting Categorical Data
+### Converting Categorical Data
 Converting categorical data is an essential step in preparing your dataset for analysis or modeling, especially for machine learning algorithms that require numerical input. 
 
 - **Label Encoding**: I used label encoding to convert the *salary* variable into numerical data, as it is an ordinal variable.
@@ -114,29 +114,34 @@ Converting categorical data is an essential step in preparing your dataset for a
 
   ![bool to float](https://github.com/user-attachments/assets/285acd92-7521-4c69-a28f-7b2415ba09c1)
 
-#### Rearranging Columns
+### Rearranging Columns
 After performing one-hot encoding, the dependent variable is not positioned as the last column. Therefore, I rearranged the columns to move the dependent variable, satisfaction_level, to the last column.
 
   ![hot move](https://github.com/user-attachments/assets/f4298b3a-7006-4fe5-8987-83067fc0f938)
 
-#### Checking for NaN values
+### Checking for NaN values
 This code will help you identify which columns in the dataset have missing values and how many NaN values are present in each column.
 
   ![nan values](https://github.com/user-attachments/assets/5a276b6c-7613-4130-8a25-e1e550922271)
 
-#### Handling Missing Values
+### Handling Missing Values
 After identifying missing values in the dataset, I use the mean of each respective column to fill any NaN values in specific columns of the dataset_encoded DataFrame.
 
   ![handle missing values](https://github.com/user-attachments/assets/00eaa29a-c499-497c-9560-492211d06627)
 
-#### Checking for Duplicates
+### Checking for Duplicates
 Checking for duplicates is a critical part of the data cleaning process to ensure high-quality, reliable data for analysis or modeling.
 
   ![duplicates](https://github.com/user-attachments/assets/bf6a3171-a9b2-4f67-853a-33ffa3f629ad)
 
-#### Removing Duplicates
+### Removing Duplicates
  After checking, I found that the dataset contained 787 duplicate entries. I removed these duplicates to enhance the quality and reliability of the data.
 
+  ![removing duplicates](https://github.com/user-attachments/assets/925aba8f-2abc-40c4-bc07-17591f2983df)
+
+### Getting the inputs and outputs
+This line of code is extracting a subset of the dataset_cleaned DataFrame that includes all rows and all columns except the first and the last. Then stored in the variable X, which is a NumPy array containing the independent variables used for modeling.
+
   
- 
-## Logistic Regression
+
+## Methodology for Logistic Regression
