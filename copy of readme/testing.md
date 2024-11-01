@@ -198,7 +198,8 @@ After identifying missing values in the dataset, I use the mean of each respecti
    We continue with standardizing the features to improve logistic regression model performance and ensure consistent scaling across training and test data. StandardScaler scales each feature to have a mean of 0 and a standard deviation of 1, which optimizes logistic regression by giving equal weight to each variable and improving model accuracy.
 
    ![Screenshot 2024-11-01 144448](https://github.com/user-attachments/assets/71bdf82c-4334-45e3-a988-b2b21c504a61)
-
+   
+### Part 2 - Building and training the model
 #### Training the Logistic Regression Model
    On this part, we train the logistic regression model on the preprocessed training data. *LogisticRegression* learns from the relationships between independent variables (X_train) and the target (y_train). *random_state=0* ensures reproducibility, and logistic regression is chosen for its interpretability and suitability for binary classification tasks like predicting turnover probability.
 
@@ -219,7 +220,7 @@ After identifying missing values in the dataset, I use the mean of each respecti
 
    This line makes predictions without re-scaling X_test. Typically, scaling is required for logistic regression to perform accurately, as it aligns feature scales. Using unscaled data can lead to poor predictions and reduced accuracy, so in a well-preprocessed model pipeline, scaled data should be used (as shown in model.predict(sc.transform(X_test))). This line can be useful for comparisons or testing purposes, but in practice, it is recommended to always use scaled data with logistic regression.
 
-
+### Part 3: Evaluating the model 
 #### Evaluating Model Performance with a Confusion Matrix
    This part assesses the model’s classification performance in terms of true positives, true negatives, false positives, and false negatives. The confusion matrix breaks down predictions to show where the model performs well and where it struggles, which helps refine the model if needed.
 
