@@ -86,7 +86,13 @@ The objective of this project is to analyze the factors influencing *employee sa
    ![import again](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
 
 #### Rearranging Columns
-   Place the dependent variable, satisfaction_level, as the last column in the dataset.
+   Reorder the dataset so that the dependent variable, satisfaction_level, is the last column. Then, use dataset_reordered.head() to display the rows and columns of the dataset, confirming it has been loaded correctly and allowing you to preview the data.
+
+   ![moving](https://github.com/user-attachments/assets/9ec9c908-d036-45dc-aa81-31e7ecc02576)
+
+#### Checking Data Types
+Each column in a DataFrame can have a different data type, which affects how you can manipulate and analyze the data. In this dataset, there are two common data types: object (typically used for string data) and float (used for numeric data).
 
    
+
 
