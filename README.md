@@ -170,6 +170,8 @@ This code is to prepare the dataset for model training and evaluation. By splitt
 - **y_train**
  Used for traing the model of dependent variable.
 
+   ![y train](https://github.com/user-attachments/assets/db60a9e6-db29-4325-b7b9-34445b512867)
+
 - **y_test**
 Used for testing the model of dependent variable.
 
