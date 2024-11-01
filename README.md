@@ -117,8 +117,8 @@ Converting categorical data is an essential step in preparing your dataset for a
 #### Rearranging Columns
 After performing one-hot encoding, the dependent variable is not positioned as the last column. Therefore, I rearranged the columns to move the dependent variable, satisfaction_level, to the last column.
 
-  
-   
+  ![hot move](https://github.com/user-attachments/assets/f4298b3a-7006-4fe5-8987-83067fc0f938)
+
 #### Checking for NaN values
 This code will help you identify which columns in the dataset have missing values and how many NaN values are present in each column.
 
@@ -129,6 +129,9 @@ After identifying missing values in the dataset, I use the mean of each respecti
 
   ![handle missing values](https://github.com/user-attachments/assets/00eaa29a-c499-497c-9560-492211d06627)
 
-#### Rearranging Columns
+#### Checking for Duplicates
+Checking for duplicates is a critical part of the data cleaning process to ensure high-quality, reliable data for analysis or modeling.
+
+  
 
 ## Logistic Regression
