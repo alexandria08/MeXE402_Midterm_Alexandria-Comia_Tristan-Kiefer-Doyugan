@@ -231,7 +231,7 @@ After identifying missing values in the dataset, I use the mean of each respecti
 
    ![Screenshot 2024-11-01 144728](https://github.com/user-attachments/assets/5b71becb-1b94-4966-b161-35ff1f53395e)
 
-#### Generating a Classification Report
+  
    This one evaluates precision, recall, and F1-score for each class. *classification_report* provides insights into the model’s sensitivity (recall), precision, and balanced F1-score for both employees who stay and those who leave, offering a more detailed assessment of performance.
 
    ![Screenshot 2024-11-01 144741](https://github.com/user-attachments/assets/a0f8cf40-9211-4af6-9d29-a3772d0e3e34)
@@ -246,7 +246,54 @@ After identifying missing values in the dataset, I use the mean of each respecti
    
    ![Screenshot 2024-11-01 144808](https://github.com/user-attachments/assets/e5e55d91-0cf4-4574-af8a-1840bbd85f0b)
 
+### Part 4: Visualization of the model 
+#### Import Libraries
+   Here, we import necessary libraries for visualization and evaluation. matplotlib and seaborn are used for plotting, while roc_curve and auc help evaluate model performance.
+
+   ![Screenshot 2024-11-01 181854](https://github.com/user-attachments/assets/02ac25ff-f6e5-4bb8-b7c1-e2abf2374c1b)
+
+#### Visualize Coefficients
+   On this line of code, we created a DataFrame to analyze the impact of each feature. We extract coefficients from the logistic regression model to understand which features have the most influence on attrition, sorting them for clarity.
+
+   ![Screenshot 2024-11-01 181904](https://github.com/user-attachments/assets/17a04a5d-46e2-474a-b559-2ee77b66d629)
+
+#### Plot Coefficients
+   Here, we visualize the influence of each feature. A bar plot helps identify which features positively or negatively affect attrition, aiding in feature importance analysis.
+
+   ![Screenshot 2024-11-01 181917](https://github.com/user-attachments/assets/87feb7ab-5cb0-4110-8ffb-1c7c2641d8c8)
+
+   And by plotting, we get this:
+   
+   ![elec 2 co eefficients plot](https://github.com/user-attachments/assets/0627f44c-2cf3-48ea-be5e-af55b5a1f48e)
+   
+   We can interpret this by saying that our Positive Coefficients (Factors Increasing Attrition Likelihood) such as 
+   - OverTime: Employees who work overtime are more likely to leave.
+   - BusinessTravel_Travel_Frequently: Frequent travel correlates with higher attrition.
+   - YearsAtCompany: Longer tenure seems to increase attrition risk, possibly due to burnout or lack of advancement.
+   - MaritalStatus_Single: Single employees are more prone to leave compared to their married counterparts.
+   - YearsSinceLastPromotion: A longer time since the last promotion is associated with higher attrition, indicating dissatisfaction with career progression.
+
+   Now for Negative Coefficients (Factors Decreasing Attrition Likelihood):
+   - YearsInCurrentRole: Longer duration in the current role reduces attrition, suggesting role satisfaction.
+   - EducationField_Medical: Employees in the medical field show lower turnover.
+   - YearsWithCurrManager: Good relationships with current managers decrease attrition likelihood.
+   - EnvironmentSatisfaction: Higher satisfaction with the work environment leads to reduced attrition.
+   - YJobSatisfaction: Satisfied employees are less likely to leave.
+
+#### Predict Probabilities and Compute ROC Curve
+   On here, we predict the probability of attrition for the test set and calculate metrics for the ROC curve. By using the trained model, we estimate the likelihood of each employee leaving, focusing on the probability of the positive class and we determine the false positive rate (FPR) and true positive rate (TPR) to understand the model's ability to distinguish between classes. Calculate the area under the curve (AUC) as a performance metric.
+
+   ![Screenshot 2024-11-01 181929](https://github.com/user-attachments/assets/01c81cf5-953f-4157-859f-5f0b20bb516e)
+
+#### Plot ROC Curve
+   Now here, we visualize the model performance with the ROC curve. The ROC curve shows the trade-off between sensitivity and specificity. The AUC provides a single metric to summarize the model's performance.
+
+   ![Screenshot 2024-11-01 181956](https://github.com/user-attachments/assets/81a3aaff-8a6a-4bd0-97b2-e5f2b7050ace)
+
 Each of these steps contributes to the goal of understanding the factors influencing employee attrition while building a predictive model to estimate the likelihood of turnover based on demographic and job-related variables.
+
+   
+
 
 
 
