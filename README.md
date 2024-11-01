@@ -83,4 +83,10 @@ The objective of this project is to analyze the factors influencing *employee sa
 #### Importing Dataset
    To import the dataset, I uploaded my CSV file, used the pandas library to handle data as a DataFrame, and applied the pd.read_csv() function to read the file. This function loads the data into a structured format, converting it into a pandas DataFrame for easy data manipulation and analysis.
 
+   ![import](https://github.com/user-attachments/assets/6da7626e-3e5a-4d26-a4b7-f13696632713)
+
+#### Rearranging Columns
+   Place the dependent variable, satisfaction_level, as the last column in the dataset.
+
    
+
