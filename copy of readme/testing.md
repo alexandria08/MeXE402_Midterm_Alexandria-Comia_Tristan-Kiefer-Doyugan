@@ -131,4 +131,14 @@ After identifying missing values in the dataset, I use the mean of each respecti
 ### Part 1 - Data Processing
 #### Importing Dataset
    We begin by loading the dataset to begin the analysis and modeling process. This line imports the dataset, containing both demographic and job-related attributes, which will be analyzed to identify factors influencing employee attrition.
+   
    ![nice](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
+
+   Another thing to note is that this dataset is clean already, so that's less load for us to work on, hooray for that.
+   
+   ![yippee-happy](https://github.com/user-attachments/assets/10b55811-660f-4ca2-a61a-ba7a1f4cfcc0)
+
+#### Encoding Binary Categorical Variables
+   After importing the dataset, we convert the binary categorical variables (Attrition, Gender, and OverTime) into numeric format for model compatibility. By using *LabelEncoder* transforms these variables to binary numeric values (0 or 1). Encoding 'Attrition' is essential as it’s the target variable (dependent), indicating turnover likelihood. 'Gender' and 'OverTime' are independent variables related to demographics and job conditions, impacting attrition.
+
+   ![niceu](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
