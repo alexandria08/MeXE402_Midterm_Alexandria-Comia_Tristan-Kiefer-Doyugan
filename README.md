@@ -93,6 +93,13 @@ The objective of this project is to analyze the factors influencing *employee sa
 #### Checking Data Types
 Each column in a DataFrame can have a different data type, which affects how you can manipulate and analyze the data. In this dataset, there are two common data types: object (typically used for string data) and float (used for numeric data).
 
-   
+   ![dtypes](https://github.com/user-attachments/assets/557efbf9-a12e-4c6c-a243-c5c457185605)
 
+#### Converting Categorical Data
+Converting categorical data is an essential step in preparing your dataset for analysis or modeling, especially for machine learning algorithms that require numerical input. 
+
+- **Label Encoding**
+  I used label encoding to convert the salary variable into numerical data, as it is an ordinal variable.
+
+  
 
