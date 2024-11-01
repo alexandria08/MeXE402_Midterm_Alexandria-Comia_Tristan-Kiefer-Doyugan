@@ -126,3 +126,4 @@ After identifying missing values in the dataset, I use the mean of each respecti
 
 #### Rearranging Columns
 
+## Logistic Regression
