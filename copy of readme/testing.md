@@ -131,3 +131,4 @@ After identifying missing values in the dataset, I use the mean of each respecti
 ### Part 1 - Data Processing
 #### Importing Dataset
    To import the dataset, I uploaded my CSV file, used the pandas library to handle data as a DataFrame, and applied the pd.read_csv() function to read the file. This function loads the data into a structured format, converting it into a pandas DataFrame for easy data manipulation and analysis.
+   ![nice](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
