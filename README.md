@@ -230,4 +230,10 @@ It measures the average squared difference between the predicted values and the 
 ### Cross Validation
 This performs cross-validation on a linear regression model to evaluate its performance in terms of Mean Squared Error.
 
+![cross val](https://github.com/user-attachments/assets/a9002a52-4a49-49dc-b0ca-91deada37508)
+
+## Part 4- Visualization
+
+### Scatter Plot
+
 ## Methodology for Logistic Regression
