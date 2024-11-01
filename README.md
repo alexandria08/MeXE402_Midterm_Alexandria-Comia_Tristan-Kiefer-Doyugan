@@ -217,9 +217,11 @@ The r2_score compares the true values (y_test) with the predicted values (y_pred
 
 ### Adjusted R-Squared
 A modified version of R-squared that accounts for the number of predictors in the model, making it more suitable for evaluating models with multiple independent variables. 
+
 ### Mean Squared Error
 It measures the average squared difference between the predicted values and the actual values.
 
 ### Cross Validation
+This performs cross-validation on a linear regression model to evaluate its performance in terms of Mean Squared Error.
 
 ## Methodology for Logistic Regression
