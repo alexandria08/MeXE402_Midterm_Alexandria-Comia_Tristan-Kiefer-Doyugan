@@ -256,46 +256,6 @@ It is a graphical representation of the distribution of numerical data. Each bar
 
 ![pink](https://github.com/user-attachments/assets/25d056c6-fa33-4079-816a-7954a9cced2b)
 
-## Results
-
-### Linear Regression
-
-<div align="center">
- 
-|**Metric** |**Value**  |
-| --------------- | --------------- |
-| R-Squared    | 0.52   |
-| Adjusted R-Squared    | 0.51    |
-| Mean Squared Error    | 0.03    |
-| Mean Cross Val MSE    | 0.03    |
-| Standard Dev of MSE    | 0.02    |
-
-</div>
-
-- **Interpretation of Metrics**: 
- 1. **R- Squared**
-     - **Interpretation**: Approximately 51.76% of the variance in the dependent variable can be explained by the independent variables included in the model. This indicates that while the model has some predictive power, it also leaves a significant portion of the variance unexplained.
-     - **Findings**: A value around 0.5 suggests that the model is moderately effective but may not be capturing all relevant factors affecting employee satisfaction. Additional variables or a different modeling approach could potentially improve this.
-       
- 2. **Adjusted R-Squared**
-     - **Interpretation**: The adjusted R-squared is very close to the R-squared value, indicating that the model's complexity is justified and that the variables used do contribute meaningful information.
-     - *Findings*: The small difference between the R-squared and adjusted R-squared values suggests that the independent variables are relevant to predicting satisfaction levels without introducing significant noise.
-       
- 3. **Mean Squared Error**
-     - **Interpretation**:  The value being in the range of 0.0297 (on a min-max scaled basis) suggests that the predictions are relatively close to the actual values.
-     - **Findings**: This value suggests reasonable performance.
-       
- 4. **Mean Cross-Validated MSE**
-     - **Interpretation**: The model makes predictions where the difference between those predictions and the actual satisfaction levels is around 0.0283.
-     - **Findings**: The model is relatively close in its predictions, and the errors are generally small.
-       
- 5. **Standard Deviation of MSE**
-     - **Interpretation**:  A standard deviation of 0.0154 is relatively small, which means that the MSE is consistent across different folds and that the model's performance is stable.
-     - **Findings**: Stability in MSE suggests that the model is robust and performs consistently well across different subsets of the data.
-     - 
-- **Recommendations**
-  1. Consider exploring additional features that might impact employee satisfaction.
-  2. Test other modeling techniques.
            
 ### Logistic Regression
 
@@ -441,6 +401,35 @@ It is a graphical representation of the distribution of numerical data. Each bar
 
 Each of these steps contributes to the goal of understanding the factors influencing employee attrition while building a predictive model to estimate the likelihood of turnover based on demographic and job-related variables.
 
+   And by plotting, we get this for the Coefficient:
+   
+   ![elec 2 co eefficients plot](https://github.com/user-attachments/assets/0627f44c-2cf3-48ea-be5e-af55b5a1f48e)
+
+   The logistic regression model uses these coefficients to estimate the probability of employee attrition. With that said, High Positive Coefficients indicate strong predictors of attrition. Efforts to reduce overtime or address frequent travel could lower turnover. while High Negative Coefficients Suggests areas to focus on for retention, like enhancing job satisfaction and improving work-life balance.
+      
+   We can interpret this by saying that our Positive Coefficients (Factors Increasing Attrition Likelihood) such as 
+   - OverTime: Employees who work overtime are more likely to leave.
+   - BusinessTravel_Travel_Frequently: Frequent travel correlates with higher attrition.
+   - YearsAtCompany: Longer tenure seems to increase attrition risk, possibly due to burnout or lack of advancement.
+   - MaritalStatus_Single: Single employees are more prone to leave compared to their married counterparts.
+   - YearsSinceLastPromotion: A longer time since the last promotion is associated with higher attrition, indicating dissatisfaction with career progression.
+
+   Now for Negative Coefficients (Factors Decreasing Attrition Likelihood):
+   - YearsInCurrentRole: Longer duration in the current role reduces attrition, suggesting role satisfaction.
+   - EducationField_Medical: Employees in the medical field show lower turnover.
+   - YearsWithCurrManager: Good relationships with current managers decrease attrition likelihood.
+   - EnvironmentSatisfaction: Higher satisfaction with the work environment leads to reduced attrition.
+   - JobSatisfaction: Satisfied employees are less likely to leave.
+
+     Now for conclusions for coefficients, we can say that we can Focus on managing overtime, providing growth opportunities, and improving job satisfaction to reduce attrition. We can use the model to identify high-risk groups and tailor retention strategies accordingly. 
+
+
+     And by plotting ROC, we get this: 
+
+     ![ROC output plotted](https://github.com/user-attachments/assets/63cdb51b-2cda-4fe2-bce5-897a53a3ea97)
+
+     As we can see, the overview is that the ROC curve illustrates the model's ability to distinguish between employees who leave and those who stay. The True Positive Rate (Sensitivity) Measures the proportion of actual attritions correctly identified by the model, the False Positive Rate indicates the proportion of non-attrition cases incorrectly classified as attrition. An AUC of 0.86 indicates a strong model performance. The model has an 86% chance of correctly distinguishing between an employee who leaves and one who stays. The closer the AUC is to 1, the better the model is at predicting attrition. We can also use this model to focus retention efforts on employees identified as high-risk, potentially reducing turnover rates.
+
 ## Results
 
 ### Linear Regression
@@ -478,32 +467,8 @@ Each of these steps contributes to the goal of understanding the factors influen
      - **Interpretation**:  A standard deviation of 0.0154 is relatively small, which means that the MSE is consistent across different folds and that the model's performance is stable.
      - **Findings**: Stability in MSE suggests that the model is robust and performs consistently well across different subsets of the data.
        
+  - **Recommendations**
+  1. Consider exploring additional features that might impact employee satisfaction.
+  2. Test other modeling techniques.
+     
 ### Logistic Regression
-   And by plotting, we get this for the Coefficient:
-   
-   ![elec 2 co eefficients plot](https://github.com/user-attachments/assets/0627f44c-2cf3-48ea-be5e-af55b5a1f48e)
-
-   The logistic regression model uses these coefficients to estimate the probability of employee attrition. With that said, High Positive Coefficients indicate strong predictors of attrition. Efforts to reduce overtime or address frequent travel could lower turnover. while High Negative Coefficients Suggests areas to focus on for retention, like enhancing job satisfaction and improving work-life balance.
-      
-   We can interpret this by saying that our Positive Coefficients (Factors Increasing Attrition Likelihood) such as 
-   - OverTime: Employees who work overtime are more likely to leave.
-   - BusinessTravel_Travel_Frequently: Frequent travel correlates with higher attrition.
-   - YearsAtCompany: Longer tenure seems to increase attrition risk, possibly due to burnout or lack of advancement.
-   - MaritalStatus_Single: Single employees are more prone to leave compared to their married counterparts.
-   - YearsSinceLastPromotion: A longer time since the last promotion is associated with higher attrition, indicating dissatisfaction with career progression.
-
-   Now for Negative Coefficients (Factors Decreasing Attrition Likelihood):
-   - YearsInCurrentRole: Longer duration in the current role reduces attrition, suggesting role satisfaction.
-   - EducationField_Medical: Employees in the medical field show lower turnover.
-   - YearsWithCurrManager: Good relationships with current managers decrease attrition likelihood.
-   - EnvironmentSatisfaction: Higher satisfaction with the work environment leads to reduced attrition.
-   - JobSatisfaction: Satisfied employees are less likely to leave.
-
-     Now for conclusions for coefficients, we can say that we can Focus on managing overtime, providing growth opportunities, and improving job satisfaction to reduce attrition. We can use the model to identify high-risk groups and tailor retention strategies accordingly. 
-
-
-     And by plotting ROC, we get this: 
-
-     ![ROC output plotted](https://github.com/user-attachments/assets/63cdb51b-2cda-4fe2-bce5-897a53a3ea97)
-
-     As we can see, the overview is that the ROC curve illustrates the model's ability to distinguish between employees who leave and those who stay. The True Positive Rate (Sensitivity) Measures the proportion of actual attritions correctly identified by the model, the False Positive Rate indicates the proportion of non-attrition cases incorrectly classified as attrition. An AUC of 0.86 indicates a strong model performance. The model has an 86% chance of correctly distinguishing between an employee who leaves and one who stays. The closer the AUC is to 1, the better the model is at predicting attrition. We can also use this model to focus retention efforts on employees identified as high-risk, potentially reducing turnover rates.
