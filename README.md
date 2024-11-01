@@ -453,3 +453,45 @@ Each of these steps contributes to the goal of understanding the factors influen
   2. Test other modeling techniques.
      
 ### Logistic Regression
+
+<div align="center">
+
+
+|**Metric** |**Value**  |
+| --------------- | --------------- |
+| Accuracy   | 	0.88   |
+| Precision (Attrition)    | 0.74    |
+| Recall (Attrition)    | 0.47    |
+| F1 Score (Attrition)    | 0.57    |
+| AUC-ROC Score    | 0.855    |
+
+</div>
+
+
+- **Interpretation of Metrics**: 
+ 1. **Accuracy**
+     - **Interpretation**: The model's overall accuracy of 88% indicates that it correctly predicts employee attrition status 88% of the time.
+     - **Findings**: This accuracy suggests that the model is relatively effective in distinguishing between employees likely to stay and those at risk of attrition, but it does not account for the balance between different types of prediction errors.
+
+ 2. **Precision (Attrition)**
+     - **Interpretation**: Precision of 0.74 for predicting attrition means that when the model predicts an employee will leave, it is correct 74% of the time.
+     - **Findings**: This is relatively high and useful for minimizing false positives, indicating that the model is good at accurately identifying employees who will likely leave without excessive misclassification.
+       
+ 3. **Recall (Attrition)**
+     - **Interpretation**:  With a recall of 0.47, the model captures 47% of the actual attrition cases.
+     - **Findings**: This indicates that the model is not catching all cases of attrition, which may suggest some limitations in detecting all employees at risk of leaving. Improvements in recall might be needed, particularly if the goal is to identify as many attrition cases as possible.
+       
+ 4. **F1 Score (Attrition)**
+     - **Interpretation**: The F1 score of 0.57 for attrition is a balance between precision and recall. It combines both into a single metric that is useful when there’s a trade-off between the two.
+     - **Findings**: A moderate F1 score suggests that the model does a reasonable job of both finding and correctly identifying attrition cases, though further improvements in recall could enhance the model’s effectiveness.
+       
+ 5. **AUC-ROC Score**
+     - **Interpretation**:  The AUC-ROC score of 0.855 indicates good separation between employees who are likely to stay and those at risk of leaving, with the model ranking attrition risk effectively.
+     - **Findings**: This high AUC-ROC score suggests that the model has a strong discriminatory power, capturing patterns that distinguish between employees who will stay and those who might leave.
+
+  - **Recommendations**
+  1. Improve Recall: Since recall for attrition is somewhat low, consider adding additional features or testing alternate algorithms, like ensemble models, that might capture more attrition cases.
+  2. Explore Employee Support Programs: Given that overtime and frequent travel are strong predictors of attrition, implementing employee support initiatives could help reduce turnover.
+  3. Monitor Employee Satisfaction Metrics: Strengthening factors related to work-life balance and environmental satisfaction might improve retention based on the negative coefficient influence.
+
+This analysis provides actionable insights for understanding and predicting employee attrition, focusing on key demographic and job-related factors influencing turnover probability that this model has outputted.
