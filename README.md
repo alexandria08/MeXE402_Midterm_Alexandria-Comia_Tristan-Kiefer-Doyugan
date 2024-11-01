@@ -193,6 +193,8 @@ This trains the linear regression model by finding the coefficients that relate 
 
 - **y_pred**: This line uses the predict method of the trained model to generate predictions based on the test data which is X_test.
 
+![inference y pred](https://github.com/user-attachments/assets/a5d6195f-e00f-43e0-b214-d247817e0f30)
+
 - **y_test**: Represents the true values or actual target values of the test set.
   
 - **Mean values for model predict**: I used the mean values of each feature to create a single data point, which I used to make predictions with model.predict.
