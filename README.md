@@ -247,6 +247,8 @@ This scatter plot provides a visual representation of the relationship between t
 
 ![barbie](https://github.com/user-attachments/assets/473019ec-e867-4565-bbc8-71193910b870)
 
+![barbie](https://github.com/user-attachments/assets/e43dd148-769c-409b-84c0-13cb0d6889d2)
+
 ### Histogram
 It is a graphical representation of the distribution of numerical data. Each bar in the histogram represents the frequency (count) of data points that fall within a specific range of values.
 
