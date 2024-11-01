@@ -499,5 +499,23 @@ Each of these steps contributes to the goal of understanding the factors influen
 This analysis provides actionable insights for understanding and predicting employee attrition, focusing on key demographic and job-related factors influencing turnover probability that this model has outputted.
 
 ## Discussion
+In this project, we used **Linear Regression** to predict employee satisfaction and **Logistic Regression** to predict employee attrition. Here’s a comparison of how each model performed and some reflections on their strengths and limitations.
 
+### Linear Regression 
+
+1. **Moderate Accuracy**: The model’s R-squared score of 0.52 shows that it explains about 52% of the variation in satisfaction, meaning that it only captures a portion of what drives employee satisfaction.
+2. **Consistent Results**: The close values of R-squared and Adjusted R-squared suggest that our chosen variables do help in predicting satisfaction without unnecessary complexity.
+3. **Model Limitations**: Linear regression assumes a straightforward relationship between variables, so it might miss more complex influences on satisfaction.
+
+
+### Logistic Regression
+
+1. **High Accuracy**: With an accuracy of 88% and an AUC-ROC score of 0.855, the model is effective at differentiating between employees likely to stay and those likely to leave.
+2. **Precision vs. Recall**: The model’s precision of 74% indicates it’s good at identifying employees who are truly at risk of leaving. However, the recall is 47%, meaning it misses some of the employees who will actually leave.
+3. **Model Limitations**: Logistic Regression assumes linear relationships and is sensitive to unbalanced data. Since there are likely more employees staying than leaving, the model might miss some employees who are at risk of leaving.
+
+
+### Overall Comparison and Limitations
+- **Predictive Power**: Logistic Regression was better for predicting the binary outcome (stay vs. leave), while Linear Regression captured only moderate accuracy in predicting continuous satisfaction levels.
+- **Limitations**: Both models assume linear relationships, which may not always apply. The models might also benefit from more features to fully capture employee behavior.
 
