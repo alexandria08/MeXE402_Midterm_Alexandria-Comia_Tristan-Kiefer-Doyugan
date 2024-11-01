@@ -384,6 +384,11 @@ It is a graphical representation of the distribution of numerical data. Each bar
    Here, we visualize the influence of each feature. A bar plot helps identify which features positively or negatively affect attrition, aiding in feature importance analysis.
 
    ![Screenshot 2024-11-01 181917](https://github.com/user-attachments/assets/87feb7ab-5cb0-4110-8ffb-1c7c2641d8c8)
+
+   
+   And by plotting, we get this for the Coefficient:
+   
+   ![elec 2 co eefficients plot](https://github.com/user-attachments/assets/0627f44c-2cf3-48ea-be5e-af55b5a1f48e)
    
 ### Predict Probabilities and Compute ROC Curve
    On here, we predict the probability of attrition for the test set and calculate metrics for the ROC curve. By using the trained model, we estimate the likelihood of each employee leaving, focusing on the probability of the positive class and we determine the false positive rate (FPR) and true positive rate (TPR) to understand the model's ability to distinguish between classes. Calculate the area under the curve (AUC) as a performance metric.
@@ -395,11 +400,13 @@ It is a graphical representation of the distribution of numerical data. Each bar
 
    ![Screenshot 2024-11-01 181956](https://github.com/user-attachments/assets/81a3aaff-8a6a-4bd0-97b2-e5f2b7050ace)
 
+   And by plotting ROC curve, we get this:
+
+   ![ROC output plotted](https://github.com/user-attachments/assets/254393f3-50c3-47d6-876b-0ae07e21468f)
+
+
 Each of these steps contributes to the goal of understanding the factors influencing employee attrition while building a predictive model to estimate the likelihood of turnover based on demographic and job-related variables.
 
-   And by plotting, we get this for the Coefficient:
-   
-   ![elec 2 co eefficients plot](https://github.com/user-attachments/assets/0627f44c-2cf3-48ea-be5e-af55b5a1f48e)
 
    The logistic regression model uses these coefficients to estimate the probability of employee attrition. With that said, High Positive Coefficients indicate strong predictors of attrition. Efforts to reduce overtime or address frequent travel could lower turnover. while High Negative Coefficients Suggests areas to focus on for retention, like enhancing job satisfaction and improving work-life balance.
       
