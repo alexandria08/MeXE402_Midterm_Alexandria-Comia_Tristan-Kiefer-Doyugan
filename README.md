@@ -108,4 +108,8 @@ Converting categorical data is an essential step in preparing your dataset for a
 
 - **One-Hot Encoding**: I used one-hot encoding to convert the *dept* variable into numerical data, as it is a nominal variable.
 
+  ![hot encoding](https://github.com/user-attachments/assets/136f38ae-fef3-4565-9b6f-ad91e065ee34)
+
+    After converting the dept data into numerical values, the values became bool or binary, so I changed the data type from bool to float.
+
   
