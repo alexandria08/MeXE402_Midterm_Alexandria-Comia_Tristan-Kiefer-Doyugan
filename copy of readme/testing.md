@@ -172,7 +172,7 @@ After identifying missing values in the dataset, I use the mean of each respecti
 #### Encoding Binary Categorical Variables
    After importing the dataset, we convert the binary categorical variables (Attrition, Gender, and OverTime) into numeric format for model compatibility. By using *LabelEncoder*, it transforms these variables into binary numeric values (0 or 1). Encoding 'Attrition' is essential as it’s the target variable (dependent), indicating turnover likelihood. 'Gender' and 'OverTime' are independent variables related to demographics and job conditions, impacting attrition.
 
-   ![niceu](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
+   ![Screenshot 2024-11-01 165635](https://github.com/user-attachments/assets/31b27ca3-df1f-4f3f-aad9-d3af10c5e887)
 
 #### One-Hot Encoding Non-Binary Categorical Variables
    To prevent ordinal misinterpretation, we encode multi-category categorical variables into a format suitable for logistic regression. One-Hot Encoding converts each unique category into a separate binary column, ensuring categories in BusinessTravel, Department, etc., are treated independently. Dropping the first category (drop_first=True) avoids multicollinearity in the model.
