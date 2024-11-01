@@ -135,7 +135,6 @@ After identifying missing values in the dataset, I use the mean of each respecti
    ![nice](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
 
    Another thing to note is that this dataset is clean already, so that's less load for us to work on, hooray for that.
-   
    ![yippee-happy](https://github.com/user-attachments/assets/10b55811-660f-4ca2-a61a-ba7a1f4cfcc0)
 
 #### Encoding Binary Categorical Variables
