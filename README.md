@@ -257,16 +257,16 @@ It is a graphical representation of the distribution of numerical data. Each bar
 ![pink](https://github.com/user-attachments/assets/25d056c6-fa33-4079-816a-7954a9cced2b)
 
            
-### Logistic Regression
+## Logistic Regression
 
 ## Methodology for Logistic Regression
-### Part 1 - Data Processing
-#### Importing the Dataset
+## Part 1 - Data Processing
+### Importing the Dataset
    We begin by loading the dataset to begin the analysis and modeling process. This line imports the dataset, containing both demographic and job-related attributes, which will be analyzed to identify factors influencing employee attrition.
    
    ![Screenshot 2024-11-01 141554](https://github.com/user-attachments/assets/666de5ee-8cbf-4152-b905-4d1f94e84eba)
 
-#### Data Quality Checking 
+### Data Quality Checking 
    In this line, it helps identify the number of missing values in each column of the dataset. This line sums up missing (null) values per column, which helps assess data completeness. Detecting missing values is crucial for effective preprocessing, as missing data can distort model training and reduce predictive accuracy. If any columns have a significant amount of missing data, appropriate handling methods (e.g., imputation or removal) may be applied to ensure data quality.
 
    ![Screenshot 2024-11-01 164744](https://github.com/user-attachments/assets/05fb8a2a-e068-4d4d-9ce3-b0fb91dffb88)
@@ -283,7 +283,7 @@ It is a graphical representation of the distribution of numerical data. Each bar
 
    ![Screenshot 2024-11-01 165147](https://github.com/user-attachments/assets/670f9866-78ed-4418-94e1-33ff912c9e50)
 
-#### Dataset Inspection
+### Dataset Inspection
    After all of the things above, we now verify the dataset’s structure, types, and non-null values after preprocessing. This step checks that all variables are encoded properly and validates that columns contain expected data types, facilitating a smooth model training process.
 
    ![Screenshot 2024-11-01 143832](https://github.com/user-attachments/assets/9bff245b-4a89-4ecb-b253-e1685ff48b03)
@@ -292,43 +292,43 @@ It is a graphical representation of the distribution of numerical data. Each bar
 
    ![Screenshot 2024-11-01 143858](https://github.com/user-attachments/assets/0a9c1cb4-d62c-4adf-8ab0-1eadc515cd3a)
 
-#### Encoding Binary Categorical Variables
+### Encoding Binary Categorical Variables
    After importing the dataset, we convert the binary categorical variables (Attrition, Gender, and OverTime) into numeric format for model compatibility. By using *LabelEncoder*, it transforms these variables into binary numeric values (0 or 1). Encoding 'Attrition' is essential as it’s the target variable (dependent), indicating turnover likelihood. 'Gender' and 'OverTime' are independent variables related to demographics and job conditions, impacting attrition.
 
    ![Screenshot 2024-11-01 165635](https://github.com/user-attachments/assets/31b27ca3-df1f-4f3f-aad9-d3af10c5e887)
 
-#### One-Hot Encoding Non-Binary Categorical Variables
+### One-Hot Encoding Non-Binary Categorical Variables
    To prevent ordinal misinterpretation, we encode multi-category categorical variables into a format suitable for logistic regression. One-Hot Encoding converts each unique category into a separate binary column, ensuring categories in BusinessTravel, Department, etc., are treated independently. Dropping the first category (drop_first=True) avoids multicollinearity in the model.
 
    ![Screenshot 2024-11-01 143637](https://github.com/user-attachments/assets/dfd78d2c-0bcc-49a4-bd2b-b4cc2c4a3a1b)
 
-#### Dropping Non-Informative Columns
+### Dropping Non-Informative Columns
    Now, we remove columns that do not contribute meaningful information to attrition prediction. These columns (EmployeeNumber, Over18, StandardHours, EmployeeCount) are not directly related to demographic or job-related factors that might impact turnover, so dropping them reduces data noise and improves model clarity.
 
    ![Screenshot 2024-11-01 143733](https://github.com/user-attachments/assets/afaad33f-01fc-4496-ab59-1a4566901222)
 
-#### Defining Features and Target Variable
+### Defining Features and Target Variable
    Proceeding with the separation of the dataset into independent variables (X) and the dependent variable (y) as 'Attrition' (dependent variable) indicates employee turnover, while the remaining columns in X include demographic and job-related factors that may influence attrition. Splitting these sets prepares the data for model training and evaluation.
    
    ![Screenshot 2024-11-01 144004](https://github.com/user-attachments/assets/9e7f80cb-2877-4a55-a31a-87f1f206c574)
 
-#### Splitting the Dataset into Training and Test Sets
+### Splitting the Dataset into Training and Test Sets
    After Defining Features and Target Variable, we now divide the data into training and test subsets for model development and validation. *train_test_split* splits the data, using 80% for training the model and 20% for testing. *random_state=0* ensures reproducibility, and an 80-20 split balances training model effectiveness with testing accuracy.
 
    ![Screenshot 2024-11-01 144004](https://github.com/user-attachments/assets/9e7f80cb-2877-4a55-a31a-87f1f206c574)
 
-#### Scaling the Features
+### Scaling the Features
    We continue with standardizing the features to improve logistic regression model performance and ensure consistent scaling across training and test data. StandardScaler scales each feature to have a mean of 0 and a standard deviation of 1, which optimizes logistic regression by giving equal weight to each variable and improving model accuracy.
 
    ![Screenshot 2024-11-01 144448](https://github.com/user-attachments/assets/71bdf82c-4334-45e3-a988-b2b21c504a61)
    
-### Part 2 - Building and training the model
-#### Training the Logistic Regression Model
+## Part 2 - Building and training the model
+### Training the Logistic Regression Model
    On this part, we train the logistic regression model on the preprocessed training data. *LogisticRegression* learns from the relationships between independent variables (X_train) and the target (y_train). *random_state=0* ensures reproducibility, and logistic regression is chosen for its interpretability and suitability for binary classification tasks like predicting turnover probability.
 
    ![Screenshot 2024-11-01 144515](https://github.com/user-attachments/assets/6416eebc-80da-4517-bf9f-2676c900c175)
 
-#### Making Predictions
+### Making Predictions
    Here, we generate predictions for the test set, *X_test*, using the trained logistic regression model after scaling the data. This line first applies the StandardScaler transformation (sc.transform(X_test)) to ensure that the test data is scaled in the same way as the training data. The model then uses predict() to output predicted classes (0 for "No Attrition" and 1 for "Attrition") for each instance in the test set. This step is essential for evaluating model performance, as the predicted labels, y_pred, will be compared with the actual labels (y_test) to measure accuracy and other metrics, ensuring reliable assessment of the model's ability to generalize to new data.
 
    ![Screenshot 2024-11-01 144550](https://github.com/user-attachments/assets/a5ff537f-2591-4ec9-aded-001ebd14e298)
@@ -343,13 +343,13 @@ It is a graphical representation of the distribution of numerical data. Each bar
 
    This line makes predictions without re-scaling X_test. Typically, scaling is required for logistic regression to perform accurately, as it aligns feature scales. Using unscaled data can lead to poor predictions and reduced accuracy, so in a well-preprocessed model pipeline, scaled data should be used (as shown in model.predict(sc.transform(X_test))). This line can be useful for comparisons or testing purposes, but in practice, it is recommended to always use scaled data with logistic regression.
 
-### Part 3: Evaluating the model 
-#### Evaluating Model Performance with a Confusion Matrix
+## Part 3: Evaluating the model 
+### Evaluating Model Performance with a Confusion Matrix
    This part assesses the model’s classification performance in terms of true positives, true negatives, false positives, and false negatives. The confusion matrix breaks down predictions to show where the model performs well and where it struggles, which helps refine the model if needed.
 
    ![Screenshot 2024-11-01 144712](https://github.com/user-attachments/assets/0d3ffd88-4eea-4ab6-b4ae-5d987a4c1595)
 
-#### Calculating Accuracy Score
+### Calculating Accuracy Score
    This measures the overall proportion of correct predictions. *accuracy_score* is a straightforward metric, useful for initial model validation but can be misleading if classes are imbalanced (e.g., if few employees leave). Additional metrics (below) provide a more nuanced evaluation.
 
    ![Screenshot 2024-11-01 144728](https://github.com/user-attachments/assets/5b71becb-1b94-4966-b161-35ff1f53395e)
@@ -359,42 +359,38 @@ It is a graphical representation of the distribution of numerical data. Each bar
 
    ![Screenshot 2024-11-01 144741](https://github.com/user-attachments/assets/a0f8cf40-9211-4af6-9d29-a3772d0e3e34)
 
-#### Calculating AUC-ROC Score
+### Calculating AUC-ROC Score
    This step can measure the model’s ability to distinguish between employees likely to stay versus those likely to leave. roc_auc_score (area under the ROC curve) quantifies how well the model ranks higher-risk employees. An AUC closer to 1 indicates strong predictive power for attrition.
 
    ![Screenshot 2024-11-01 144755](https://github.com/user-attachments/assets/b55ad77b-3aca-47a8-9187-03487a75da4c)
 
-#### Interpreting Model Coefficients
+### Interpreting Model Coefficients
    And finally, this identifies which features have the strongest influence on attrition likelihood. Logistic regression coefficients reveal each variable's weight in predicting turnover, aiding in the analysis of demographic and job-related factors that most affect attrition. This interpretation helps align model insights with the objective of analyzing turnover drivers.
    
    ![Screenshot 2024-11-01 144808](https://github.com/user-attachments/assets/e5e55d91-0cf4-4574-af8a-1840bbd85f0b)
 
-### Part 4: Visualization of the model 
-#### Import Libraries
+## Part 4: Visualization of the model 
+### Import Libraries
    Here, we import necessary libraries for visualization and evaluation. matplotlib and seaborn are used for plotting, while roc_curve and auc help evaluate model performance.
 
    ![Screenshot 2024-11-01 181854](https://github.com/user-attachments/assets/02ac25ff-f6e5-4bb8-b7c1-e2abf2374c1b)
 
-#### Visualize Coefficients
+### Visualize Coefficients
    On this line of code, we created a DataFrame to analyze the impact of each feature. We extract coefficients from the logistic regression model to understand which features have the most influence on attrition, sorting them for clarity.
 
    ![Screenshot 2024-11-01 181904](https://github.com/user-attachments/assets/17a04a5d-46e2-474a-b559-2ee77b66d629)
 
-#### Plot Coefficients
+### Plot Coefficients
    Here, we visualize the influence of each feature. A bar plot helps identify which features positively or negatively affect attrition, aiding in feature importance analysis.
 
    ![Screenshot 2024-11-01 181917](https://github.com/user-attachments/assets/87feb7ab-5cb0-4110-8ffb-1c7c2641d8c8)
-
-   And by plotting, we get this:
    
-   ![elec 2 co eefficients plot](https://github.com/user-attachments/assets/0627f44c-2cf3-48ea-be5e-af55b5a1f48e)
-   
-#### Predict Probabilities and Compute ROC Curve
+### Predict Probabilities and Compute ROC Curve
    On here, we predict the probability of attrition for the test set and calculate metrics for the ROC curve. By using the trained model, we estimate the likelihood of each employee leaving, focusing on the probability of the positive class and we determine the false positive rate (FPR) and true positive rate (TPR) to understand the model's ability to distinguish between classes. Calculate the area under the curve (AUC) as a performance metric.
 
    ![Screenshot 2024-11-01 181929](https://github.com/user-attachments/assets/01c81cf5-953f-4157-859f-5f0b20bb516e)
 
-#### Plot ROC Curve
+### Plot ROC Curve
    Now here, we visualize the model performance with the ROC curve. The ROC curve shows the trade-off between sensitivity and specificity. The AUC provides a single metric to summarize the model's performance.
 
    ![Screenshot 2024-11-01 181956](https://github.com/user-attachments/assets/81a3aaff-8a6a-4bd0-97b2-e5f2b7050ace)
@@ -407,23 +403,6 @@ Each of these steps contributes to the goal of understanding the factors influen
 
    The logistic regression model uses these coefficients to estimate the probability of employee attrition. With that said, High Positive Coefficients indicate strong predictors of attrition. Efforts to reduce overtime or address frequent travel could lower turnover. while High Negative Coefficients Suggests areas to focus on for retention, like enhancing job satisfaction and improving work-life balance.
       
-   We can interpret this by saying that our Positive Coefficients (Factors Increasing Attrition Likelihood) such as 
-   - OverTime: Employees who work overtime are more likely to leave.
-   - BusinessTravel_Travel_Frequently: Frequent travel correlates with higher attrition.
-   - YearsAtCompany: Longer tenure seems to increase attrition risk, possibly due to burnout or lack of advancement.
-   - MaritalStatus_Single: Single employees are more prone to leave compared to their married counterparts.
-   - YearsSinceLastPromotion: A longer time since the last promotion is associated with higher attrition, indicating dissatisfaction with career progression.
-
-   Now for Negative Coefficients (Factors Decreasing Attrition Likelihood):
-   - YearsInCurrentRole: Longer duration in the current role reduces attrition, suggesting role satisfaction.
-   - EducationField_Medical: Employees in the medical field show lower turnover.
-   - YearsWithCurrManager: Good relationships with current managers decrease attrition likelihood.
-   - EnvironmentSatisfaction: Higher satisfaction with the work environment leads to reduced attrition.
-   - JobSatisfaction: Satisfied employees are less likely to leave.
-
-     Now for conclusions for coefficients, we can say that we can Focus on managing overtime, providing growth opportunities, and improving job satisfaction to reduce attrition. We can use the model to identify high-risk groups and tailor retention strategies accordingly. 
-
-
      And by plotting ROC, we get this: 
 
      ![ROC output plotted](https://github.com/user-attachments/assets/63cdb51b-2cda-4fe2-bce5-897a53a3ea97)
