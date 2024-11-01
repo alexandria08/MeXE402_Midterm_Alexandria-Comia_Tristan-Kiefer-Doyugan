@@ -182,6 +182,10 @@ Used for testing the model of dependent variable.
 ### Building the Model
 This code sets up a linear regression model that be can train on the dataset.
 
+   ![building model](https://github.com/user-attachments/assets/7dd54833-d9a6-4ae8-9baf-787883040004)
 
+### Training the Model
+
+### Inference
 
 ## Methodology for Logistic Regression
