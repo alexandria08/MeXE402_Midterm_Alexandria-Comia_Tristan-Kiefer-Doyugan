@@ -122,4 +122,7 @@ This code will help you identify which columns in the dataset have missing value
 #### Handling Missing Values
 After identifying missing values in the dataset, I use the mean of each respective column to fill any NaN values in specific columns of the dataset_encoded DataFrame.
 
-  
+  ![handle missing values](https://github.com/user-attachments/assets/00eaa29a-c499-497c-9560-492211d06627)
+
+#### Rearranging Columns
+
