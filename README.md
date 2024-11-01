@@ -177,5 +177,11 @@ Used for testing the model of dependent variable.
 
    ![y test](https://github.com/user-attachments/assets/4e6f0233-6b70-4c03-909a-6b44682fd4fb)
 
-### 
+## Part 2- Building and Training the model
+
+### Building the Model
+This code sets up a linear regression model that be can train on the dataset.
+
+
+
 ## Methodology for Logistic Regression
