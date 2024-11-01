@@ -196,7 +196,9 @@ This trains the linear regression model by finding the coefficients that relate 
 ![inference y pred](https://github.com/user-attachments/assets/a5d6195f-e00f-43e0-b214-d247817e0f30)
 
 - **y_test**: Represents the true values or actual target values of the test set.
-  
+- 
+  ![inference y test](https://github.com/user-attachments/assets/1909f0ee-41cb-49b9-ae62-6b73f13b23b7)
+
 - **Mean values for model predict**: I used the mean values of each feature to create a single data point, which I used to make predictions with model.predict.
   
 - **model.predict**: This code generate a prediction using the model based on the mean values of features. 
