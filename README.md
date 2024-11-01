@@ -185,7 +185,18 @@ This code sets up a linear regression model that be can train on the dataset.
    ![building model](https://github.com/user-attachments/assets/7dd54833-d9a6-4ae8-9baf-787883040004)
 
 ### Training the Model
+This trains the linear regression model by finding the coefficients that relate the independent variable (X_train) to the target variable (y_train).
+
+![training model](https://github.com/user-attachments/assets/1b10805c-e438-4d61-911a-660126d3dd1c)
 
 ### Inference
 
+- **y_pred**: This line uses the predict method of the trained model to generate predictions based on the test data which is X_test.
+
+- **y_test**: Represents the true values or actual target values of the test set.
+  
+- **Mean values for model predict**: I used the mean values of each feature to create a single data point, which I used to make predictions with model.predict.
+  
+- **model.predict**: This code generate a prediction using the model based on the mean values of features. 
+  
 ## Methodology for Logistic Regression
