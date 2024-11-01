@@ -390,7 +390,7 @@ It is a graphical representation of the distribution of numerical data. Each bar
    - EducationField_Medical: Employees in the medical field show lower turnover.
    - YearsWithCurrManager: Good relationships with current managers decrease attrition likelihood.
    - EnvironmentSatisfaction: Higher satisfaction with the work environment leads to reduced attrition.
-   - YJobSatisfaction: Satisfied employees are less likely to leave.
+   - JobSatisfaction: Satisfied employees are less likely to leave.
 
 #### Predict Probabilities and Compute ROC Curve
    On here, we predict the probability of attrition for the test set and calculate metrics for the ROC curve. By using the trained model, we estimate the likelihood of each employee leaving, focusing on the probability of the positive class and we determine the false positive rate (FPR) and true positive rate (TPR) to understand the model's ability to distinguish between classes. Calculate the area under the curve (AUC) as a performance metric.
@@ -401,6 +401,11 @@ It is a graphical representation of the distribution of numerical data. Each bar
    Now here, we visualize the model performance with the ROC curve. The ROC curve shows the trade-off between sensitivity and specificity. The AUC provides a single metric to summarize the model's performance.
 
    ![Screenshot 2024-11-01 181956](https://github.com/user-attachments/assets/81a3aaff-8a6a-4bd0-97b2-e5f2b7050ace)
+
+   And by plotting, we get this:
+
+   ![ROC output plotted](https://github.com/user-attachments/assets/63cdb51b-2cda-4fe2-bce5-897a53a3ea97)
+
 
 Each of these steps contributes to the goal of understanding the factors influencing employee attrition while building a predictive model to estimate the likelihood of turnover based on demographic and job-related variables.
 
