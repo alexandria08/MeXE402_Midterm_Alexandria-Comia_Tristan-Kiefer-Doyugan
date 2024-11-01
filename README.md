@@ -145,8 +145,10 @@ Checking for duplicates is a critical part of the data cleaning process to ensur
 - **X for independent variables**
 The code extracting a subset of the dataset_cleaned DataFrame that includes all rows and all columns except the first and the last.
 
+   ![X](https://github.com/user-attachments/assets/28f4e8c5-18bd-4b4a-a2e3-a0147285c7d3)
+
 - **y for dependent variable**
 The code extracts all values from the last column of the cleaned dataset and stores them in the variable y.
   
-
+   
 ## Methodology for Logistic Regression
