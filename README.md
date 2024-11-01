@@ -155,6 +155,8 @@ The code extracts all values from the last column of the cleaned dataset and sto
 ### Creating the Training Sets and the Test Set
 This code is to prepare the dataset for model training and evaluation. By splitting the data, the model can be train on *training set* and evaluate its performance on *testing set*, which helps assess how well the model generalizes to new data.
 
+   ![split](https://github.com/user-attachments/assets/32fddbcf-b023-4d65-ae7b-39b7f2989cca)
+
 - **X_train**
   Used for training the model of independent variables.
   
