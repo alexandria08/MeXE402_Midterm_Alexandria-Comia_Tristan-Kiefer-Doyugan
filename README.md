@@ -225,6 +225,8 @@ A modified version of R-squared that accounts for the number of predictors in th
 ### Mean Squared Error
 It measures the average squared difference between the predicted values and the actual values.
 
+![mse](https://github.com/user-attachments/assets/847c5b36-1902-4143-a2a9-c42797bcc5b3)
+
 ### Cross Validation
 This performs cross-validation on a linear regression model to evaluate its performance in terms of Mean Squared Error.
 
