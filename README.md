@@ -63,8 +63,16 @@
 </div>
 
 - **Dependent Variable**: Attrition
-- **Independent Variable**: BusinessTravel, Department, EducationField, Gender, JobRole, MaritalStatus, OverTime
-
+- **Independent Variable**: 'Age', BusinessTravel', 'DailyRate', 'Department',
+       'DistanceFromHome', 'Education', 'EducationField', 'EmployeeCount',
+       'EmployeeNumber', 'EnvironmentSatisfaction', 'Gender', 'HourlyRate',
+       'JobInvolvement', 'JobLevel', 'JobRole', 'JobSatisfaction',
+       'MaritalStatus', 'MonthlyIncome', 'MonthlyRate', 'NumCompaniesWorked',
+       'Over18', 'OverTime', 'PercentSalaryHike', 'PerformanceRating',
+       'RelationshipSatisfaction', 'StandardHours', 'StockOptionLevel',
+       'TotalWorkingYears', 'TrainingTimesLastYear', 'WorkLifeBalance',
+       'YearsAtCompany', 'YearsInCurrentRole', 'YearsSinceLastPromotion',
+       'YearsWithCurrManager'
 ## Project Objectives
 
 The objective of this project is to analyze the factors influencing *employee satisfaction* and *employee attrition* within organizations, aiming to enhance overall organizational performance.
