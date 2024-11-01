@@ -132,6 +132,11 @@ After identifying missing values in the dataset, I use the mean of each respecti
 #### Checking for Duplicates
 Checking for duplicates is a critical part of the data cleaning process to ensure high-quality, reliable data for analysis or modeling.
 
-  
+  ![duplicates](https://github.com/user-attachments/assets/bf6a3171-a9b2-4f67-853a-33ffa3f629ad)
 
+#### Removing Duplicates
+ After checking, I found that the dataset contained 787 duplicate entries. I removed these duplicates to enhance the quality and reliability of the data.
+
+  
+ 
 ## Logistic Regression
