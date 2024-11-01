@@ -241,6 +241,12 @@ This scatter plot provides a visual representation of the relationship between t
 
 ![scatter plot](https://github.com/user-attachments/assets/d0fd233d-fcce-49fb-9a68-57af96835178)
 
+### Histogram
+It is a graphical representation of the distribution of numerical data. Each bar in the histogram represents the frequency (count) of data points that fall within a specific range of values.
+
+![histogram](https://github.com/user-attachments/assets/0d64b38a-7111-4215-80ac-22f80b0bde4c)
+
+
 ## Methodology for Logistic Regression
 ### Part 1 - Data Processing
 #### Importing the Dataset
