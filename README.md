@@ -98,10 +98,14 @@ Each column in a DataFrame can have a different data type, which affects how you
 #### Converting Categorical Data
 Converting categorical data is an essential step in preparing your dataset for analysis or modeling, especially for machine learning algorithms that require numerical input. 
 
-- **Label Encoding**: I used label encoding to convert the salary variable into numerical data, as it is an ordinal variable.
+- **Label Encoding**: I used label encoding to convert the *salary* variable into numerical data, as it is an ordinal variable.
 
   ![salary](https://github.com/user-attachments/assets/c34f438b-5b6a-4c02-8085-58e57cad8b8a)
 
      After converting the salary data into numerical values, the values became integers, so I changed the data type from integer to float.
+
+  ![int to float](https://github.com/user-attachments/assets/71e3333c-3a51-4b88-9f05-932f45b434f3)
+
+- **One-Hot Encoding**: I used one-hot encoding to convert the *dept* variable into numerical data, as it is a nominal variable.
 
   
