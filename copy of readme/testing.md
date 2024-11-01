@@ -243,6 +243,8 @@ After identifying missing values in the dataset, I use the mean of each respecti
 
 #### Interpreting Model Coefficients
    And finally, this identifies which features have the strongest influence on attrition likelihood. Logistic regression coefficients reveal each variable's weight in predicting turnover, aiding in the analysis of demographic and job-related factors that most affect attrition. This interpretation helps align model insights with the objective of analyzing turnover drivers.
+   
+   ![Screenshot 2024-11-01 144808](https://github.com/user-attachments/assets/e5e55d91-0cf4-4574-af8a-1840bbd85f0b)
 
 
 
