@@ -246,7 +246,7 @@ After identifying missing values in the dataset, I use the mean of each respecti
    
    ![Screenshot 2024-11-01 144808](https://github.com/user-attachments/assets/e5e55d91-0cf4-4574-af8a-1840bbd85f0b)
 
-
+Each of these steps contributes to the goal of understanding the factors influencing employee attrition while building a predictive model to estimate the likelihood of turnover based on demographic and job-related variables.
 
 
 
