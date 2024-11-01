@@ -386,20 +386,6 @@ It is a graphical representation of the distribution of numerical data. Each bar
    
    ![elec 2 co eefficients plot](https://github.com/user-attachments/assets/0627f44c-2cf3-48ea-be5e-af55b5a1f48e)
    
-   We can interpret this by saying that our Positive Coefficients (Factors Increasing Attrition Likelihood) such as 
-   - OverTime: Employees who work overtime are more likely to leave.
-   - BusinessTravel_Travel_Frequently: Frequent travel correlates with higher attrition.
-   - YearsAtCompany: Longer tenure seems to increase attrition risk, possibly due to burnout or lack of advancement.
-   - MaritalStatus_Single: Single employees are more prone to leave compared to their married counterparts.
-   - YearsSinceLastPromotion: A longer time since the last promotion is associated with higher attrition, indicating dissatisfaction with career progression.
-
-   Now for Negative Coefficients (Factors Decreasing Attrition Likelihood):
-   - YearsInCurrentRole: Longer duration in the current role reduces attrition, suggesting role satisfaction.
-   - EducationField_Medical: Employees in the medical field show lower turnover.
-   - YearsWithCurrManager: Good relationships with current managers decrease attrition likelihood.
-   - EnvironmentSatisfaction: Higher satisfaction with the work environment leads to reduced attrition.
-   - JobSatisfaction: Satisfied employees are less likely to leave.
-
 #### Predict Probabilities and Compute ROC Curve
    On here, we predict the probability of attrition for the test set and calculate metrics for the ROC curve. By using the trained model, we estimate the likelihood of each employee leaving, focusing on the probability of the positive class and we determine the false positive rate (FPR) and true positive rate (TPR) to understand the model's ability to distinguish between classes. Calculate the area under the curve (AUC) as a performance metric.
 
@@ -409,11 +395,6 @@ It is a graphical representation of the distribution of numerical data. Each bar
    Now here, we visualize the model performance with the ROC curve. The ROC curve shows the trade-off between sensitivity and specificity. The AUC provides a single metric to summarize the model's performance.
 
    ![Screenshot 2024-11-01 181956](https://github.com/user-attachments/assets/81a3aaff-8a6a-4bd0-97b2-e5f2b7050ace)
-
-   And by plotting, we get this:
-
-   ![ROC output plotted](https://github.com/user-attachments/assets/63cdb51b-2cda-4fe2-bce5-897a53a3ea97)
-
 
 Each of these steps contributes to the goal of understanding the factors influencing employee attrition while building a predictive model to estimate the likelihood of turnover based on demographic and job-related variables.
 
@@ -455,3 +436,31 @@ Each of these steps contributes to the goal of understanding the factors influen
      - **Findings**: Stability in MSE suggests that the model is robust and performs consistently well across different subsets of the data.
        
 ### Logistic Regression
+   And by plotting, we get this for the Coefficient:
+   
+   ![elec 2 co eefficients plot](https://github.com/user-attachments/assets/0627f44c-2cf3-48ea-be5e-af55b5a1f48e)
+
+   The logistic regression model uses these coefficients to estimate the probability of employee attrition. With that said, High Positive Coefficients indicate strong predictors of attrition. Efforts to reduce overtime or address frequent travel could lower turnover. while High Negative Coefficients Suggests areas to focus on for retention, like enhancing job satisfaction and improving work-life balance.
+      
+   We can interpret this by saying that our Positive Coefficients (Factors Increasing Attrition Likelihood) such as 
+   - OverTime: Employees who work overtime are more likely to leave.
+   - BusinessTravel_Travel_Frequently: Frequent travel correlates with higher attrition.
+   - YearsAtCompany: Longer tenure seems to increase attrition risk, possibly due to burnout or lack of advancement.
+   - MaritalStatus_Single: Single employees are more prone to leave compared to their married counterparts.
+   - YearsSinceLastPromotion: A longer time since the last promotion is associated with higher attrition, indicating dissatisfaction with career progression.
+
+   Now for Negative Coefficients (Factors Decreasing Attrition Likelihood):
+   - YearsInCurrentRole: Longer duration in the current role reduces attrition, suggesting role satisfaction.
+   - EducationField_Medical: Employees in the medical field show lower turnover.
+   - YearsWithCurrManager: Good relationships with current managers decrease attrition likelihood.
+   - EnvironmentSatisfaction: Higher satisfaction with the work environment leads to reduced attrition.
+   - JobSatisfaction: Satisfied employees are less likely to leave.
+
+     Now for conclusions for coefficients, we can say that we can Focus on managing overtime, providing growth opportunities, and improving job satisfaction to reduce attrition. We can use the model to identify high-risk groups and tailor retention strategies accordingly. 
+
+
+     And by plotting ROC, we get this: 
+
+     ![ROC output plotted](https://github.com/user-attachments/assets/63cdb51b-2cda-4fe2-bce5-897a53a3ea97)
+
+     As we can see, the overview is that the ROC curve illustrates the model's ability to distinguish between employees who leave and those who stay. The True Positive Rate (Sensitivity) Measures the proportion of actual attritions correctly identified by the model, the False Positive Rate indicates the proportion of non-attrition cases incorrectly classified as attrition. An AUC of 0.86 indicates a strong model performance. The model has an 86% chance of correctly distinguishing between an employee who leaves and one who stays. The closer the AUC is to 1, the better the model is at predicting attrition. We can also use this model to focus retention efforts on employees identified as high-risk, potentially reducing turnover rates.
