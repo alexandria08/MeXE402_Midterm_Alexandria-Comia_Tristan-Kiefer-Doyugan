@@ -245,14 +245,14 @@ This performs cross-validation on a linear regression model to evaluate its perf
 ### Scatter Plot
 This scatter plot provides a visual representation of the relationship between the actual and predicted values, helping you assess the model's performance visually.
 
-![scatter plot](https://github.com/user-attachments/assets/84e40b4f-cd5a-49f0-8d50-55c48fa168f4)
-
-![scatter plot](https://github.com/user-attachments/assets/d0fd233d-fcce-49fb-9a68-57af96835178)
+![barbie](https://github.com/user-attachments/assets/473019ec-e867-4565-bbc8-71193910b870)
 
 ### Histogram
 It is a graphical representation of the distribution of numerical data. Each bar in the histogram represents the frequency (count) of data points that fall within a specific range of values.
 
-![barbie](https://github.com/user-attachments/assets/473019ec-e867-4565-bbc8-71193910b870)
+![pink](https://github.com/user-attachments/assets/dae79b3f-06c2-4579-b870-38f0025af689)
+
+![pink](https://github.com/user-attachments/assets/25d056c6-fa33-4079-816a-7954a9cced2b)
 
 
 
