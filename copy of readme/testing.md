@@ -138,14 +138,36 @@ After identifying missing values in the dataset, I use the mean of each respecti
 ## Logistic Regression
 
 ### Part 1 - Data Processing
-#### Importing Dataset
+#### Importing the Dataset
    We begin by loading the dataset to begin the analysis and modeling process. This line imports the dataset, containing both demographic and job-related attributes, which will be analyzed to identify factors influencing employee attrition.
    
-   ![nice](https://github.com/user-attachments/assets/9cf5d17c-8eb8-4430-8335-97949de1417b)
+   ![Screenshot 2024-11-01 141554](https://github.com/user-attachments/assets/666de5ee-8cbf-4152-b905-4d1f94e84eba)
 
--   Another thing to note is that this dataset is clean already, so that's less load for us to work on, hooray for that.
-   
-    ![yippee-happy](https://github.com/user-attachments/assets/10b55811-660f-4ca2-a61a-ba7a1f4cfcc0)
+#### Data Quality Checking 
+   In this line, it helps identify the number of missing values in each column of the dataset. This line sums up missing (null) values per column, which helps assess data completeness. Detecting missing values is crucial for effective preprocessing, as missing data can distort model training and reduce predictive accuracy. If any columns have a significant amount of missing data, appropriate handling methods (e.g., imputation or removal) may be applied to ensure data quality.
+
+   ![Screenshot 2024-11-01 164744](https://github.com/user-attachments/assets/05fb8a2a-e068-4d4d-9ce3-b0fb91dffb88)
+
+   This line counts the number of duplicate rows in the dataset. It checks for duplicated entries, which, if present, could bias model training by over-representing certain data points. Identifying and removing duplicates helps maintain a diverse dataset and improves the model’s ability to generalize, ensuring that each row represents a unique employee’s data in this attrition analysis context.
+
+   ![Screenshot 2024-11-01 164921](https://github.com/user-attachments/assets/436815f5-6769-4c9f-9639-44ca1b35ef7d)
+
+   The purpose of this one is to separate the columns into categorical and numerical types for easier targeted preprocessing. This code uses *select_dtypes* to categorize columns based on data type, helping organize preprocessing steps. categorical_columns holds columns containing categorical data, while numerical_columns contains columns with numerical data. This separation allows for tailored handling of each type: encoding for categorical features and scaling or outlier treatment for numerical ones, ensuring that each variable is optimized for logistic regression.
+
+   ![Screenshot 2024-11-01 165127](https://github.com/user-attachments/assets/329b539a-f792-4a4a-972f-748604d0690f)
+
+   This line displays the distribution of values in each categorical column. This loop iterates over each categorical column and prints its unique value counts. Understanding the distribution of categorical values is essential for identifying potential class imbalances (e.g., if a column has a dominant category) and confirming data readiness for encoding. This insight helps ensure that categories are adequately represented and informs decisions like balancing classes or combining categories if necessary.
+
+   ![Screenshot 2024-11-01 165147](https://github.com/user-attachments/assets/670f9866-78ed-4418-94e1-33ff912c9e50)
+
+#### Dataset Inspection
+   After all of the things above, we now verify the dataset’s structure, types, and non-null values after preprocessing. This step checks that all variables are encoded properly and validates that columns contain expected data types, facilitating a smooth model training process.
+
+   ![Screenshot 2024-11-01 143832](https://github.com/user-attachments/assets/9bff245b-4a89-4ecb-b253-e1685ff48b03)
+
+   *dataset.head* displays the first 10 rows of the dataset to inspect data entries and also confirm preprocessing steps. This line provides a quick view of the dataset’s initial rows, making it easy to verify that data cleaning, encoding, and transformations (like removing unnecessary columns and encoding categorical variables) have been applied correctly. By reviewing the first few entries, you can confirm data types, assess data quality, and ensure that feature scaling and encoding were successful before proceeding to model training.
+
+   ![Screenshot 2024-11-01 143858](https://github.com/user-attachments/assets/0a9c1cb4-d62c-4adf-8ab0-1eadc515cd3a)
 
 #### Encoding Binary Categorical Variables
    After importing the dataset, we convert the binary categorical variables (Attrition, Gender, and OverTime) into numeric format for model compatibility. By using *LabelEncoder*, it transforms these variables into binary numeric values (0 or 1). Encoding 'Attrition' is essential as it’s the target variable (dependent), indicating turnover likelihood. 'Gender' and 'OverTime' are independent variables related to demographics and job conditions, impacting attrition.
@@ -161,15 +183,6 @@ After identifying missing values in the dataset, I use the mean of each respecti
    Now, we remove columns that do not contribute meaningful information to attrition prediction. These columns (EmployeeNumber, Over18, StandardHours, EmployeeCount) are not directly related to demographic or job-related factors that might impact turnover, so dropping them reduces data noise and improves model clarity.
 
    ![Screenshot 2024-11-01 143733](https://github.com/user-attachments/assets/afaad33f-01fc-4496-ab59-1a4566901222)
-
-#### Dataset Inspection
-   After all of the things above, we now verify the dataset’s structure, types, and non-null values after preprocessing. This step checks that all variables are encoded properly and validates that columns contain expected data types, facilitating a smooth model training process.
-
-   ![Screenshot 2024-11-01 143832](https://github.com/user-attachments/assets/9bff245b-4a89-4ecb-b253-e1685ff48b03)
-
-   *dataset.head* displays the first 10 rows of the dataset to inspect data entries and also confirm preprocessing steps. This line provides a quick view of the dataset’s initial rows, making it easy to verify that data cleaning, encoding, and transformations (like removing unnecessary columns and encoding categorical variables) have been applied correctly. By reviewing the first few entries, you can confirm data types, assess data quality, and ensure that feature scaling and encoding were successful before proceeding to model training.
-
-   ![Screenshot 2024-11-01 143858](https://github.com/user-attachments/assets/0a9c1cb4-d62c-4adf-8ab0-1eadc515cd3a)
 
 #### Defining Features and Target Variable
    Proceeding with the separation of the dataset into independent variables (X) and the dependent variable (y) as 'Attrition' (dependent variable) indicates employee turnover, while the remaining columns in X include demographic and job-related factors that may influence attrition. Splitting these sets prepares the data for model training and evaluation.
