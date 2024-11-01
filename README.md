@@ -204,6 +204,15 @@ This trains the linear regression model by finding the coefficients that relate 
   ![mean values](https://github.com/user-attachments/assets/ccbcb25c-9002-4049-a1cc-b5e0ed8b587d)
 
 - **model.predict**: This code generate a prediction using the model based on the mean values of features.
-  
-  
+
+## Part 3- Evaluating the Model
+
+### Feature Scaling and Model Training
+This combines feature scaling and model training for regression using Random Forests that improves model stability and accuracy by scaling the data and leveraging an ensemble method.
+
+### R- Squared
+### Adjusted R-Squared
+### Mean Squared Error
+### Cross Validation
+
 ## Methodology for Logistic Regression
