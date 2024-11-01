@@ -233,11 +233,13 @@ This performs cross-validation on a linear regression model to evaluate its perf
 ![cross val](https://github.com/user-attachments/assets/a9002a52-4a49-49dc-b0ca-91deada37508)
 
 ## Part 4- Visualization
+
+### Scatter Plot
 This scatter plot provides a visual representation of the relationship between the actual and predicted values, helping you assess the model's performance visually.
 
 ![scatter plot](https://github.com/user-attachments/assets/84e40b4f-cd5a-49f0-8d50-55c48fa168f4)
 
-### Scatter Plot
+![scatter plot](https://github.com/user-attachments/assets/d0fd233d-fcce-49fb-9a68-57af96835178)
 
 ## Methodology for Logistic Regression
 ### Part 1 - Data Processing
