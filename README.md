@@ -220,6 +220,8 @@ The r2_score compares the true values (y_test) with the predicted values (y_pred
 ### Adjusted R-Squared
 A modified version of R-squared that accounts for the number of predictors in the model, making it more suitable for evaluating models with multiple independent variables. 
 
+![adj r sqaured](https://github.com/user-attachments/assets/86c8c975-bfc1-4738-956c-e2bf669707c5)
+
 ### Mean Squared Error
 It measures the average squared difference between the predicted values and the actual values.
 
