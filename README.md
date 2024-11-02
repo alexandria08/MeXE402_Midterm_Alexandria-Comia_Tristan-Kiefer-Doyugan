@@ -257,6 +257,12 @@ This performs cross-validation on a linear regression model to evaluate its perf
 
 ![cross val](https://github.com/user-attachments/assets/a9002a52-4a49-49dc-b0ca-91deada37508)
 
+### Model Coefficients
+ This shows how much the independent variables contributes to predicting the dependent variable. Positive coefficients indicate a positive relationship, while negative coefficients indicate a negative relationship.
+ 
+![coef](https://github.com/user-attachments/assets/8c553080-7a2a-47f5-87fd-bb5fed10321d)
+
+
 ## Part 4- Visualization
 
 ### Scatter Plot
@@ -466,6 +472,13 @@ Each of these steps contributes to the goal of understanding the factors influen
  5. **Standard Deviation of MSE**
      - **Interpretation**:  A standard deviation of 0.0154 is relatively small, which means that the MSE is consistent across different folds and that the model's performance is stable.
      - **Findings**: Stability in MSE suggests that the model is robust and performs consistently well across different subsets of the data.
+
+ 6. **Model Coefficients**
+    - **Interpretation**:
+      1. Intercept (4.22): This value indicates that when all predictor variables are zero, the predicted employee satisfaction level is approximately 4.22. It serves as the baseline for predictions.
+
+      2. Coefficient (2.97): This coefficient suggests that for every 1-unit increase in the predictor variable, the satisfaction level is expected to rise by about 2.97 units. This implies a positive correlation between the predictor and employee satisfaction.
+    - **Findings**: The positive coefficient indicates a direct relationship.
        
   - **Recommendations**
   1. Consider exploring additional features that might impact employee satisfaction.
