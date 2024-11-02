@@ -230,6 +230,9 @@ This trains the linear regression model by finding the coefficients that relate 
 
 - **model.predict**: This code generate a prediction using the model based on the mean values of features.
 
+  ![model predict](https://github.com/user-attachments/assets/9997a259-ab00-4639-a806-b15bcb967ec1)
+
+
 ## Part 3- Evaluating the Model
 
 ### Feature Scaling and Model Training
