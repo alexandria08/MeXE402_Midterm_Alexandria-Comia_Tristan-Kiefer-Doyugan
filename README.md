@@ -39,8 +39,25 @@
 
 </div>
 
-- **Dependent Variable**: satisfaction_level
-- **Independent Variable**: last_evaluation, number_project, average_montly_hours, work_accident, promotion_last_5years, dept, salary
+- **Dependent Variable:**
+  - `satisfaction_level`
+
+- **Independent Variables:**
+  - `last_evaluation`
+  - `number_project`
+  - `average_monthly_hours`
+  - `work_accident`
+  - `promotion_last_5years`
+  - `salary`
+  - `dept_RandD`
+  - `dept_accounting`
+  - `dept_hr`
+  - `dept_management`
+  - `dept_marketing`
+  - `dept_product_mng`
+  - `dept_sales`
+  - `dept_support`
+  - `dept_technical`
 
 ### Logistic Regression
 - **Title**: IBM HR Analytics Attrition Dataset
